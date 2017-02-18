@@ -16,8 +16,9 @@ public final class GzipMiddleware: Middleware {
             
             if
                 let bytes = response.body.bytes,
-                let data = try? Data(bytes: bytes).gzipped(),
-                let dataBody = try? data.makeBytes() {
+                let data = try? Data(bytes: bytes).gzipped() {
+                
+                let dataBody = data.makeBytes()
                 
                 response.body = .data(dataBody)
                 response.headers["Content-Encoding"] = "gzip"
