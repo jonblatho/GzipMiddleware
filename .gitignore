@@ -1,1 +1,12 @@
-Packages/*
+# Created by https://www.gitignore.io/api/swiftpm
+
+### SwiftPM ###
+Packages
+.build
+xcuserdata
+*.xcodeproj
+DerivedData/
+
+# End of https://www.gitignore.io/api/swiftpm
+
+Package.pins
