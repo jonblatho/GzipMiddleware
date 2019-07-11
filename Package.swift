@@ -1,9 +1,10 @@
+// swift-tools-version:4.0
 import PackageDescription
 
 let package = Package(
     name: "GzipMiddleware",
     dependencies: [
-        .Package(url: "https://github.com/vapor/vapor.git", Version(2,0,0)),
-        .Package(url: "https://github.com/Zewo/zlib.git", majorVersion: 0, minor: 4)
+        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
+        .package(url: "https://github.com/richardpiazza/CZlib", from: "0.5.0")
     ]
 )
